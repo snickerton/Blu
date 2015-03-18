@@ -1,7 +1,7 @@
 
 
 //window.onload=function(){
-function	canvasLoaded(){
+function	canvasloaded(){
 	var ctx = document.getElementById("canvas").getContext("2d");
 	//ctx.fillRect(0,0,ctx.width,ctx.height); 
 	var i = 0;
