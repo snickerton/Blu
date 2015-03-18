@@ -1,6 +1,6 @@
 
 
-window.onload(function(){
+body.onload(function(){
 	var ctx = document.getElementById("canvas").getContext("2d");
 
 		drawLoadingScreen();
