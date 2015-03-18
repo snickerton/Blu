@@ -3,14 +3,17 @@
 window.onload=function(){
 	var canvas = document.getElementById("canvas");
 	var ctx = canvas.getContext("2d");
-	//ctx.fillRect(0,0,ctx.width,ctx.height); 
+	var cWidth, cHeight;
+	cWidth = canvas.width;
+	cHeight = canvas.height;
 	var i = 0;
 	setInterval(function(){
 		console.log("ran");
 		
 		ctx.font = "30px Arial";
-
 		ctx.fillStyle = "#FFF";
+		ctx.fillRect(0,0,cWidth, cHeight);
+		ctx.fillStyle = "#000";
 		if(i == 0){
 			console.log("scenario 0");
 			ctx.fillText("Loading.",canvas.width/2,canvas.height/2);
