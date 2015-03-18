@@ -2,12 +2,7 @@
 
 window.onload=function(){
 	var ctx = document.getElementById("canvas").getContext("2d");
-
-		drawLoadingScreen();
-};
-
-
-function drawLoadingScreen(){
+	drawLoadingScreen = function drawLoadingScreen(){
 	var i = 0;
 	setInterval(function(){
 		ctx.font = "30px Arial";
@@ -22,4 +17,9 @@ function drawLoadingScreen(){
 		}
 		i = (i+1)%3;
 	}, 1000);
-}
+};
+
+drawLoadingScreen();
+};
+
+
