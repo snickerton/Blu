@@ -1,6 +1,7 @@
 
 
-window.onload=function(){
+//window.onload=function(){
+function	canvasLoaded(){
 	var ctx = document.getElementById("canvas").getContext("2d");
 	//ctx.fillRect(0,0,ctx.width,ctx.height); 
 	drawLoadingScreen = function drawLoadingScreen(){
@@ -22,7 +23,8 @@ window.onload=function(){
 		}
 		i = (i+1)%3;
 	}, 1000);
-};
+}
+//};
 
 drawLoadingScreen();
 };
