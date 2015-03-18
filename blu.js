@@ -5,13 +5,13 @@ window.onload=function(){
 	//ctx.fillRect(0,0,ctx.width,ctx.height); 
 	var i = 0;
 	setInterval(function(){
-		console.log("loaded");
+		console.log("ran");
 		
 		ctx.font = "30px Arial";
 
-		console.log("background drawn");
 		ctx.fillStyle = "#FFF";
-		if(i == 0){	
+		if(i == 0){
+			console.log("scenario 0");
 			ctx.fillText("Loading.",ctx.width/2,ctx.height/2);
 		}
 		if(i == 1){
