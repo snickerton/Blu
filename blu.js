@@ -24,9 +24,10 @@ function	canvasLoaded(){
 		i = (i+1)%3;
 	}, 1000);
 }
-//};
+};
 
 drawLoadingScreen();
-};
+}
+//};
 
 
