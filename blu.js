@@ -1,13 +1,12 @@
 
 
-//window.onload=function(){
-function	canvasloaded(){
+window.onload=function(){
 	var ctx = document.getElementById("canvas").getContext("2d");
 	//ctx.fillRect(0,0,ctx.width,ctx.height); 
 	var i = 0;
 	setInterval(function(){
-				console.log("loaded");
-
+		console.log("loaded");
+		
 		ctx.font = "30px Arial";
 
 		console.log("background drawn");
@@ -24,7 +23,7 @@ function	canvasloaded(){
 		i = (i+1)%3;
 	}, 1000);
 
-}
+};
 
 
 //};
