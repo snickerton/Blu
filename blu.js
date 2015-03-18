@@ -4,11 +4,12 @@ window.onload=function(){
 	var ctx = document.getElementById("canvas").getContext("2d");
 	//ctx.fillRect(0,0,ctx.width,ctx.height); 
 	drawLoadingScreen = function drawLoadingScreen(){
+			ctx.fillStyle="#FFF";
+		ctx.fillRect(0,0,ctx.width,ctx.height);
 	var i = 0;
 	setInterval(function(){
 		ctx.font = "30px Arial";
-		ctx.fillStyle="#FFF";
-		ctx.fillRect(0,0,ctx.width,ctx.height);
+	
 		
 		ctx.fillStyle = "#000";
 		if(i == 0){	
