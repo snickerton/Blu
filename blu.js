@@ -8,6 +8,9 @@ window.onload=function(){
 	setInterval(function(){
 		ctx.font = "30px Arial";
 		ctx.fillStyle="#FFF";
+		ctx.fillRect(0,0,ctx.width,ctx.height);
+		
+		ctx.fillStyle = "#000";
 		if(i == 0){	
 			ctx.fillText("Loading.",ctx.width/2,ctx.height/2);
 		}
