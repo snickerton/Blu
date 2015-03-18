@@ -2,12 +2,12 @@
 
 window.onload=function(){
 	var ctx = document.getElementById("canvas").getContext("2d");
-	ctx.fillStyle="#FFF";
-	ctx.fillRect(0,0,ctx.width,ctx.height); 
+	//ctx.fillRect(0,0,ctx.width,ctx.height); 
 	drawLoadingScreen = function drawLoadingScreen(){
 	var i = 0;
 	setInterval(function(){
 		ctx.font = "30px Arial";
+		ctx.fillStyle="#FFF";
 		if(i == 0){	
 			ctx.fillText("Loading.",ctx.width/2,ctx.height/2);
 		}
