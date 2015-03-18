@@ -2,14 +2,13 @@
 
 window.onload=function(){
 	var ctx = document.getElementById("canvas").getContext("2d");
-	console.log("loaded");
+	ctx.fillStyle="#FFF";
+	ctx.fillRect(0,0,ctx.width,ctx.height); 
 	drawLoadingScreen = function drawLoadingScreen(){
 	var i = 0;
 	setInterval(function(){
 		ctx.font = "30px Arial";
 		if(i == 0){	
-				console.log("printed text 0");
-
 			ctx.fillText("Loading.",ctx.width/2,ctx.height/2);
 		}
 		if(i == 1){
