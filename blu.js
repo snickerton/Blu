@@ -16,13 +16,13 @@ window.onload=function(){
 		ctx.fillStyle = "#000";
 		if(i == 0){
 			console.log("scenario 0");
-			ctx.fillText("Loading.",canvas.width/2,canvas.height/2);
+			ctx.fillText("Loading.",cWidth/2 - ctx.measureText(text).width/2,canvas.height/2);
 		}
 		if(i == 1){
-			ctx.fillText("Loading..",canvas.width/2,canvas.height/2);
+			ctx.fillText("Loading..",cWidth/2 - ctx.measureText(text).width/2,canvas.height/2);
 		}
 		if(i == 2){
-			ctx.fillText("Loading...",canvas.width/2,canvas.height/2);
+			ctx.fillText("Loading...",cWidth/2 - ctx.measureText(text).width/2,canvas.height/2);
 		}
 		i = (i+1)%3;
 	}, 1000);
