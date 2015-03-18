@@ -2,6 +2,7 @@
 
 window.onload=function(){
 	var ctx = document.getElementById("canvas").getContext("2d");
+	console.log("loaded");
 	drawLoadingScreen = function drawLoadingScreen(){
 	var i = 0;
 	setInterval(function(){
