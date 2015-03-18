@@ -6,6 +6,8 @@ function	canvasLoaded(){
 	//ctx.fillRect(0,0,ctx.width,ctx.height); 
 	var i = 0;
 	setInterval(function(){
+				console.log("loaded");
+
 		ctx.font = "30px Arial";
 
 		console.log("background drawn");
@@ -21,7 +23,6 @@ function	canvasLoaded(){
 		}
 		i = (i+1)%3;
 	}, 1000);
-		console.log("loaded");
 
 }
 
