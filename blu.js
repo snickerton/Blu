@@ -8,6 +8,8 @@ window.onload=function(){
 	setInterval(function(){
 		ctx.font = "30px Arial";
 		if(i == 0){	
+				console.log("printed text 0");
+
 			ctx.fillText("Loading.",ctx.width/2,ctx.height/2);
 		}
 		if(i == 1){
