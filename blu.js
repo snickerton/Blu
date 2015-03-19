@@ -1,11 +1,16 @@
-
-
-window.onload=function(){
 	var canvas = document.getElementById("canvas");
 	var ctx = canvas.getContext("2d");
 	var cWidth, cHeight;
 	cWidth = canvas.width;
 	cHeight = canvas.height;
+
+window.onload=function(){
+
+	ctx.fillStyle = "#FFF";
+	ctx.fillRect(0,0,cWidth, cHeight);
+};
+
+	function showLS(){
 	var i = 0;
 	setInterval(function(){
 		console.log("ran");
@@ -26,8 +31,7 @@ window.onload=function(){
 		}
 		i = (i+1)%3;
 	}, 1000);
-
-};
+}
 
 
 //};
