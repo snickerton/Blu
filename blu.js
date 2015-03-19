@@ -8,6 +8,7 @@ window.onload=function(){
 
 	ctx.fillStyle = "#FFF";
 	ctx.fillRect(0,0,cWidth, cHeight);
+	showLS();
 };
 
 	function showLS(){
