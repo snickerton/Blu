@@ -1,11 +1,11 @@
+
+
+window.onload=function(){
 	var canvas = document.getElementById("canvas");
 	var ctx = canvas.getContext("2d");
 	var cWidth, cHeight;
 	cWidth = canvas.width;
 	cHeight = canvas.height;
-
-window.onload=function(){
-
 	ctx.fillStyle = "#FFF";
 	ctx.fillRect(0,0,cWidth, cHeight);
 	showLS();
