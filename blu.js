@@ -64,6 +64,14 @@ function game(){
 			player.yVel += boost;	
 		}
 		
+		if(key[65]){
+			player.yVel += boost;	
+		}
+		
+		if(key[68]){
+			player.yVel += boost;	
+		}
+		
 		if(key[83]){
 			ducking = true;	
 		}
