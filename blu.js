@@ -51,7 +51,7 @@ function game(){
                	return key[event.keyCode] = true;
         });	
 	  document.body.addEventListener('keyup', function(event) {
-        return keysdown[event.keyCode] = false;
+        return key[event.keyCode] = false;
       });
 	
 	
@@ -77,7 +77,7 @@ function game(){
 	
 		
 		//ground bounce
-		if(player.y > cHeight){
+		if(player.y > 0){
 			player.x = 0;
 			player.xVel *= -.5;
 		}
