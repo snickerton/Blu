@@ -44,7 +44,7 @@ function game(){
 	//pps = pixels per second
 	player.xVel = 0;
 	player.yVel = 0;
-	boost = -.5;
+	boost = -.7;
 	
 	key = {};
       	document.body.addEventListener('keydown', function(event) {
@@ -72,7 +72,7 @@ function game(){
 		}
 
 		
-		player.yVel += 9.8/FPS; 
+		player.yVel += 10/FPS; 
 		
 	
 		
