@@ -33,11 +33,60 @@ window.onload=function(){
 }
 
 function game(){
-		setInterval(function(){
-		ctx.fillStyle = "#000";
+	
+	var boost, player, FPS, ducking;
+	
+	FPS = 50;
+	
+	player = new Object();
+	player.x = 5;
+	player.y = 5;
+	//pps = pixels per second
+	player.xVel = 0;
+	player.yVel = 0;
+	boost = 2;
+	
+	key = {};
+      	document.body.addEventListener('keydown', function(event) {
+               	return key[event.keyCode] = true;
+        });	
+	
+	
+	
+	setInterval(function(){
+		ctx.fillStyle = rgb(0,0,0,.5);
 		ctx.fillRect(0,0,cWidth, cHeight);
+		
+		if(key[87]){
+			player.yVel += boost;	
+		}
+		
+		if(key[83]){
+			ducking = true;	
+		}
+		if(!key[83]){
+			ducking = false;
+		}
 
-	}, 1000);
+		
+		player.xVel += 9.8/FPS; 
+		player.yVel += 9.8/FPS; 
+		
+	
+		
+		//ground bounce
+		if(player.x < 0){
+			player.x = 0;
+			player.xVel *= -.5;
+		}
+		
+		
+		player.x += player.xVel;
+		player.y += player.yVel;
+		
+		ctx.fillStyle = #FFF;
+		ctx.fillRect(player.x, player.y,50, 50);
+	}, 1000/FPS);
 }
 
 
