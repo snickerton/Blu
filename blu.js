@@ -89,6 +89,12 @@ function game(){
 			player.y = cHeight-10;
 			player.yVel *= -.5;
 		}
+		
+		if(player.y < 10){
+			player.y = 10;
+			player.yVel *= -.5;
+		}
+		
 		if(player.x > cWidth-10){
 			player.x = cWidth-10;
 			player.xVel *= -.5;
