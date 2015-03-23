@@ -75,7 +75,7 @@ function game(){
 	
 		
 		//ground bounce
-		if(player.x < 0){
+		if(player.x > cHeight){
 			player.x = 0;
 			player.xVel *= -.5;
 		}
