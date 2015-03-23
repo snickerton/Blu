@@ -50,7 +50,9 @@ function game(){
       	document.body.addEventListener('keydown', function(event) {
                	return key[event.keyCode] = true;
         });	
-	
+	  document.body.addEventListener('keyup', function(event) {
+        return keysdown[event.keyCode] = false;
+      });
 	
 	
 	setInterval(function(){
