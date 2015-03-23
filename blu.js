@@ -90,8 +90,8 @@ function game(){
 			player.yVel *= -.5;
 		}
 		
-		if(player.y < 10){
-			player.y = 10;
+		if(player.y < 5){
+			player.y = 5;
 			player.yVel *= -.5;
 		}
 		
