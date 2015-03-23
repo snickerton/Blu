@@ -54,6 +54,7 @@ function game(){
 	
 	
 	setInterval(function(){
+		
 		ctx.fillStyle = rgb(0,0,0,.5);
 		ctx.fillRect(0,0,cWidth, cHeight);
 		
@@ -86,6 +87,8 @@ function game(){
 		
 		ctx.fillStyle = "#FFF";
 		ctx.fillRect(player.x, player.y,50, 50);
+		
+		console.log("Velocity:"+player.xVel+", "+player.yVel+" Position:"+player.x+", "+player.y);
 	}, 1000/FPS);
 }
 
