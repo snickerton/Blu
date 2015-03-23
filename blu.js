@@ -55,7 +55,7 @@ function game(){
 	
 	setInterval(function(){
 		
-		ctx.fillStyle = rgb(0,0,0,.5);
+		ctx.fillStyle = "#000";
 		ctx.fillRect(0,0,cWidth, cHeight);
 		
 		if(key[87]){
