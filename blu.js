@@ -65,11 +65,11 @@ function game(){
 		}
 		
 		if(key[65]){
-			player.yVel += boost;	
+			player.xVel -= boost;	
 		}
 		
 		if(key[68]){
-			player.yVel += boost;	
+			player.xVel += boost;	
 		}
 		
 		if(key[83]){
