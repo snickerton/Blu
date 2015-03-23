@@ -84,7 +84,7 @@ function game(){
 		player.x += player.xVel;
 		player.y += player.yVel;
 		
-		ctx.fillStyle = #FFF;
+		ctx.fillStyle = "#FFF"";
 		ctx.fillRect(player.x, player.y,50, 50);
 	}, 1000/FPS);
 }
