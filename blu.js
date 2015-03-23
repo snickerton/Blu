@@ -70,7 +70,6 @@ function game(){
 		}
 
 		
-		player.xVel += 9.8/FPS; 
 		player.yVel += 9.8/FPS; 
 		
 	
@@ -86,7 +85,7 @@ function game(){
 		player.y += player.yVel;
 		
 		ctx.fillStyle = "#FFF";
-		ctx.fillRect(player.x, player.y,50, 50);
+		ctx.fillRect(player.x, player.y,10, 10);
 		
 		console.log("Velocity:"+player.xVel+", "+player.yVel+" Position:"+player.x+", "+player.y);
 	}, 1000/FPS);
