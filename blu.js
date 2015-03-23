@@ -69,7 +69,7 @@ function game(){
 		}
 		
 		if(key[68]){
-			player.xVel == boost;	
+			player.xVel -= boost;	
 		}
 		
 		if(key[83]){
@@ -84,10 +84,18 @@ function game(){
 		
 	
 		
-		//ground bounce remember the height is the ground
+		//sides bounce remember the height is the ground
 		if(player.y > cHeight-10){
 			player.y = cHeight-10;
 			player.yVel *= -.5;
+		}
+		if(player.x > cWidth-10){
+			player.x = cWidth-10;
+			player.xVel *= -.5;
+		}
+		if(player.x < 10){
+			player.x = 10;
+			player.xVel *= -.5;
 		}
 		
 		
