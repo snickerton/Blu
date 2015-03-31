@@ -98,22 +98,13 @@ function game(){
 		
 		
 		for(i = 0; i<obs.length; i++){
-			if(player.y<obs[i].y){
-				player.y = obs[i].y;
+			if(player.y<obs[i].y+obs[i].size)&&player.y>obs[i].y){
 				player.yVel *= -.5;	
 			}
-			if(player.y>(obs[i].y+obs[i].size)){
-				player.y=(obs[i].y+obs[i].size);
-				player.yVel *= -.5;	
-			}
-			if(player.x<obs[i].x){
-				player.x = obs[i].x;
+			if(player.x<(obs[i].x+obs[i].size)&&player.x>obs[i].x){
 				player.xVel *= -.5;	
 			}
-			if(player.x>(obs[i].x+obs[i].size)){
-				player.y=(obs[i].x+obs[i].size);
-				player.xVel *= -.5;	
-			}
+
 		}
 		
 		
