@@ -98,7 +98,7 @@ function game(){
 		
 		
 		for(i = 0; i<obs.length; i++){
-			if(player.y<obs[i].y+obs[i].size)&&player.y>obs[i].y){
+			if(player.y<(obs[i].y+obs[i].size)&&player.y>obs[i].y){
 				player.yVel *= -.5;	
 			}
 			if(player.x<(obs[i].x+obs[i].size)&&player.x>obs[i].x){
