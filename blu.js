@@ -34,7 +34,7 @@ window.onload=function(){
 
 function game(){
 	
-	var boost, player, FPS, ducking;
+	var boost, player, FPS;
 	
 	FPS = 50;
 	
@@ -90,8 +90,8 @@ function game(){
 	
 		
 		//sides bounce remember the height is the ground
-		if(player.y > cHeight-10){
-			player.y = cHeight-10;
+		if(player.y > cHeight-player.height){
+			player.y = cHeight-player.height;
 			player.yVel *= -.5;
 		}
 		
@@ -100,8 +100,8 @@ function game(){
 			player.yVel *= -.5;
 		}
 		
-		if(player.x > cWidth-10){
-			player.x = cWidth-10;
+		if(player.x > cWidth-player.height){
+			player.x = cWidth-player.height;
 			player.xVel *= -.5;
 		}
 		if(player.x < 0){
