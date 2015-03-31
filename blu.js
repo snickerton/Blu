@@ -41,6 +41,8 @@ function game(){
 	player = new Object();
 	player.x = 5;
 	player.y = 5;
+	player.width = 10;
+	player.height = 10;
 	//pps = pixels per second
 	player.xVel = 0;
 	player.yVel = 0;
@@ -73,12 +75,15 @@ function game(){
 		}
 		
 		if(key[83]){
-			ducking = true;	
+			player.width = 13;
+			player.height = 5;
 		}
 		if(!key[83]){
-			ducking = false;
+			player.width = 10;
+			player.height = 10;
 		}
 
+		
 		
 		player.yVel += 10/FPS; 
 		
@@ -109,7 +114,7 @@ function game(){
 		player.y += player.yVel;
 		
 		ctx.fillStyle = "#FFF";
-		ctx.fillRect(player.x, player.y,10, 10);
+		ctx.fillRect(player.x, player.y,player.width, player.height);
 		
 		console.log("Velocity:"+player.xVel+", "+player.yVel+" Position:"+player.x+", "+player.y);
 	}, 1000/FPS);
