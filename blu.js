@@ -43,7 +43,7 @@ function game(){
 	var boost, player, FPS, obs;
 	
 	//array of game objects
-	obs = [];
+	obs = [new Block(cWidth/2, cHeight/2, 100, 100)];
 	
 	FPS = 50;
 	
@@ -98,8 +98,21 @@ function game(){
 		
 		
 		for(i = 0; i<obs.length; i++){
-			if(player.y<obs[i].y||player.y>(obs[i].y+obs[i].size)){
+			if(player.y<obs[i].y){
+				player.y = obs[i].y;
 				player.yVel *= -.5;	
+			}
+			if(player.y>(obs[i].y+obs[i].size)){
+				player.y=(obs[i].y+obs[i].size);
+				player.yVel *= -.5;	
+			}
+			if(player.x<obs[i].x){
+				player.x = obs[i].x;
+				player.xVel *= -.5;	
+			}
+			if(player.x>(obs[i].x+obs[i].size)){
+				player.y=(obs[i].x+obs[i].size);
+				player.xVel *= -.5;	
 			}
 		}
 		
@@ -116,7 +129,7 @@ function game(){
 		}
 		
 		if(player.x > cWidth-player.height){
-		//	player.x = cWidth-player.height;
+			player.x = cWidth-player.height;
 			player.xVel *= -.5;
 		}
 		if(player.x < 0){
