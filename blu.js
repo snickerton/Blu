@@ -32,9 +32,18 @@ window.onload=function(){
 	}, 1000);
 }
 
+function Block(x, y, size){
+	this.x = x;
+	this.y = y;
+	this.size = size;
+}
+
 function game(){
 	
-	var boost, player, FPS;
+	var boost, player, FPS, obs;
+	
+	//array of game objects
+	obs = [];
 	
 	FPS = 50;
 	
@@ -87,7 +96,13 @@ function game(){
 		
 		player.yVel += 10/FPS; 
 		
-	
+		
+		for(i = 0; i<obs.length; i++){
+			if(player.y<obs[i].y||player.y>(obs[i].y+obs[i].size)){
+				player.yVel *= -.5;	
+			}
+		}
+		
 		
 		//sides bounce remember the height is the ground
 		if(player.y > cHeight-player.height){
@@ -101,7 +116,7 @@ function game(){
 		}
 		
 		if(player.x > cWidth-player.height){
-			player.x = cWidth-player.height;
+		//	player.x = cWidth-player.height;
 			player.xVel *= -.5;
 		}
 		if(player.x < 0){
